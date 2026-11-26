@@ -1,0 +1,100 @@
+
+
+## libwayland-dev
+
+run to install libwayland-dev
+
+``` sh
+sudo apt-get install libwayland-dev
+```
+
+run
+
+``` sh
+dpkg -L libwayland-dev
+```
+
+show
+
+```
+/.
+/usr
+/usr/include
+/usr/include/wayland-client-core.h
+/usr/include/wayland-client-protocol.h
+/usr/include/wayland-client.h
+/usr/include/wayland-cursor.h
+/usr/include/wayland-egl-core.h
+/usr/include/wayland-egl.h
+/usr/include/wayland-server-core.h
+/usr/include/wayland-server-protocol.h
+/usr/include/wayland-server.h
+/usr/include/wayland-util.h
+/usr/include/wayland-version.h
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/pkgconfig
+/usr/lib/x86_64-linux-gnu/pkgconfig/wayland-client.pc
+/usr/lib/x86_64-linux-gnu/pkgconfig/wayland-cursor.pc
+/usr/lib/x86_64-linux-gnu/pkgconfig/wayland-egl.pc
+/usr/lib/x86_64-linux-gnu/pkgconfig/wayland-server.pc
+/usr/share
+/usr/share/doc
+/usr/share/doc/libwayland-dev
+/usr/share/doc/libwayland-dev/copyright
+/usr/share/wayland
+/usr/share/wayland/wayland.dtd
+/usr/share/wayland/wayland.xml
+/usr/lib/x86_64-linux-gnu/libwayland-client.so
+/usr/lib/x86_64-linux-gnu/libwayland-cursor.so
+/usr/lib/x86_64-linux-gnu/libwayland-egl.so
+/usr/lib/x86_64-linux-gnu/libwayland-server.so
+/usr/share/doc/libwayland-dev/changelog.Debian.gz
+```
+
+
+
+
+## pkg-config
+
+run
+
+``` sh
+pkg-config --cflags --libs wayland-client
+```
+
+show
+
+```
+ -lwayland-client -lm
+```
+
+
+
+
+## exit status
+
+run
+
+``` sh
+grep EXIT_SUCCESS /usr/include/stdlib.h
+```
+
+show
+
+```
+#define	EXIT_SUCCESS	0	/* Successful exit status.  */
+```
+
+run
+
+``` sh
+grep EXIT_ /usr/include/stdlib.h
+```
+
+show
+
+```
+#define	EXIT_FAILURE	1	/* Failing exit status.  */
+#define	EXIT_SUCCESS	0	/* Successful exit status.  */
+```
